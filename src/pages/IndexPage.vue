@@ -110,7 +110,7 @@ export default defineComponent({
 
     const searchBrand = (value: any) => {
       state.brandList.filter((brand: any) => {
-        if (brand.name.match(value)) {
+        if (brand.name.toLowerCase().match(value)) {
           state.filteredBrandList.push(brand);
         }
       });
